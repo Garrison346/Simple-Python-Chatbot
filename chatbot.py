@@ -36,9 +36,9 @@ def bag_of_words(sentence):
                 bag[i] = 1
     return np.array(bag)
 
-'''Takes sentence as input then uses bad of words function to create representation of the sentence then feeds the
-words to the pre trained chatbot model.Returns a list of intents with the probabilities and error underscore threshold
-variable that will set the minimum probability required for an intent to be considered. Thr list of intents
+'''Takes sentence as input then uses bag of words function to create representation of the sentence then feeds the
+words to the pre trained chatbot model. Returns a list of intents with the probabilities and error underscore threshold
+variable that will set the minimum probability required for an intent to be considered. The list of intents
 is sorted in descending order of probability and each intent is returned as a dictionary containing intent'''
 def predict_class(sentence):
     bow = bag_of_words(sentence)
